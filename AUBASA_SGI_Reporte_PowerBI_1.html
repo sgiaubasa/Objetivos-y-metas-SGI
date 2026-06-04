@@ -27,6 +27,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:var(--pbi-text);font-size:13px;height:100vh;display:flex;flex-direction:column;overflow:hidden}
+
 /* ── TOP BAR ── */
 .topbar{height:44px;background:linear-gradient(135deg,#00B5CC 0%,#0097B2 100%);display:flex;align-items:center;gap:12px;padding:0 16px;flex-shrink:0}
 .logo-area{display:flex;align-items:center;gap:10px}
@@ -35,12 +36,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 .report-sub{color:rgba(255,255,255,.65);font-size:11px;margin-left:4px}
 .topbar-right{margin-left:auto;display:flex;align-items:center;gap:8px}
 .pbi-badge{background:#00B5CC;color:#007A8C;font-weight:600;font-size:10px;padding:3px 8px;border-radius:3px;letter-spacing:.03em}
+
 /* ── PAGE TABS ── */
 .tabs{height:36px;background:#fff;border-bottom:1px solid var(--pbi-border);display:flex;align-items:flex-end;padding:0 8px;flex-shrink:0;box-shadow:0 1px 3px rgba(0,0,0,.06)}
 .tab{height:32px;padding:0 16px;border:none;background:transparent;cursor:pointer;font-size:12px;color:var(--pbi-muted);border-bottom:2px solid transparent;display:flex;align-items:center;gap:6px;white-space:nowrap;transition:.15s}
 .tab:hover{color:var(--pbi-text);background:var(--pbi-hover)}
 .tab.active{color:#00B5CC;border-bottom-color:#00B5CC;font-weight:600}
 .tab-icon{font-size:14px}
+
 /* ── MAIN LAYOUT ── */
 .workspace{flex:1;display:flex;overflow:hidden}
 .filters-panel{width:220px;background:#fff;border-right:1px solid var(--pbi-border);display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto}
@@ -59,8 +62,10 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 .fp-count strong{color:var(--pbi-accent);font-size:16px;display:block;font-weight:700}
 .fp-reset{margin:10px 14px;width:calc(100% - 28px);padding:6px;border:1px solid var(--pbi-border);background:#fff;border-radius:3px;font-size:11px;color:var(--pbi-muted);cursor:pointer}
 .fp-reset:hover{border-color:var(--pbi-accent);color:var(--pbi-accent)}
+
 /* ── CANVAS ── */
 .canvas{flex:1;overflow-y:auto;padding:16px}
+
 /* PAGE: LISTA ─────────────────────────── */
 #pg-lista .obj-block{background:#fff;border:1px solid var(--pbi-border);border-radius:4px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 #pg-lista .obj-head{padding:9px 14px;background:linear-gradient(90deg,#007A8C 0%,#009BB5 100%);display:flex;align-items:baseline;gap:10px}
@@ -74,6 +79,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 #pg-lista tbody td{font-size:11px;padding:8px 10px;vertical-align:top;line-height:1.45;overflow:hidden}
 .col-ind{width:23%}.col-meta{width:8%}.col-frec{width:7%}.col-norma{width:10%}
 .col-algo{width:17%}.col-resp{width:14%}.col-est{width:14%}.col-fecha{width:7%}
+
 /* PAGE: RESUMEN ─────────────────────────── */
 #pg-resumen{display:none}
 .cards-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
@@ -100,6 +106,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 .cambios-table td{font-size:11px;padding:7px 10px;border-bottom:1px solid #F3F2F1}
 .badge-old{background:#FFCCCC;color:#C00000;padding:2px 7px;border-radius:10px;font-size:10px;font-weight:600}
 .badge-new{background:#E2EFDA;color:#375623;padding:2px 7px;border-radius:10px;font-size:10px;font-weight:600}
+
 /* PAGE: NORMAS ─────────────────────────── */
 #pg-normas{display:none}
 .norma-section{background:#fff;border:1px solid var(--pbi-border);border-radius:4px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04)}
@@ -116,6 +123,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 .ni-dot.max{background:#375623}.ni-dot.min{background:#843C1D}
 .ni-text{font-size:11px;color:var(--pbi-text);line-height:1.4}
 .ni-meta{font-size:10px;font-weight:600;color:var(--pbi-muted);white-space:nowrap;margin-left:auto;padding-left:6px}
+
 /* BADGES */
 .meta-b{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:10px;white-space:nowrap}
 .mb-max{background:var(--lgreen);color:var(--green)}
@@ -133,11 +141,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 .ab-svia25{background:#FFF2CC;color:#7A5C00;border:1px solid #FFD966}
 .ab-svia26{background:#ED7D31;color:#fff}
 .nota-txt{font-size:9px;color:#7A5C00;font-style:italic;margin-top:2px}
+
 .empty-state{text-align:center;padding:48px 24px;color:var(--pbi-muted)}
 .empty-state svg{width:48px;height:48px;fill:var(--pbi-border);margin-bottom:12px}
+
 /* STATUS BAR */
 .statusbar{height:22px;background:#fff;border-top:1px solid var(--pbi-border);display:flex;align-items:center;padding:0 16px;gap:16px;flex-shrink:0}
 .sb-item{font-size:10px;color:var(--pbi-muted);display:flex;align-items:center;gap:4px}
+
 /* scrollbar */
 ::-webkit-scrollbar{width:6px;height:6px}
 ::-webkit-scrollbar-track{background:transparent}
@@ -145,6 +156,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 </style>
 </head>
 <body>
+
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="logo-area">
@@ -160,6 +172,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
     <span class="pbi-badge">PAU/04 - A03 · Rev.03</span>
   </div>
 </div>
+
 <!-- TABS -->
 <div class="tabs">
   <button class="tab active" onclick="showPage('lista',this)">
@@ -172,11 +185,14 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
     <span class="tab-icon">◉</span> Por Norma ISO
   </button>
 </div>
+
 <!-- WORKSPACE -->
 <div class="workspace">
+
   <!-- FILTERS PANEL -->
   <div class="filters-panel">
     <div class="fp-header">Filtros</div>
+
     <div class="fp-section">
       <div class="fp-label">
         <svg viewBox="0 0 16 16"><path d="M2 4h12l-4 5v5l-4-3V9L2 4z"/></svg>
@@ -184,6 +200,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
       </div>
       <input class="fp-search" id="fSearch" placeholder="Escribir para filtrar…" oninput="applyFilters()">
     </div>
+
     <div class="fp-section">
       <div class="fp-label">Año</div>
       <div class="fp-chips" id="chipsAnio">
@@ -192,6 +209,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
         <span class="chip" data-g="anio" data-v="2026">2026</span>
       </div>
     </div>
+
     <div class="fp-section">
       <div class="fp-label">Documento</div>
       <div class="fp-chips" id="chipsDoc">
@@ -200,6 +218,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
         <span class="chip" data-g="doc" data-v="SVIA">SVIA</span>
       </div>
     </div>
+
     <div class="fp-section">
       <div class="fp-label">Norma ISO</div>
       <div class="fp-chips" id="chipsNorma">
@@ -208,18 +227,21 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
         <span class="chip" data-g="norma" data-v="ISO 39001">39001</span>
       </div>
     </div>
+
     <div class="fp-section">
       <div class="fp-label">Proceso</div>
       <select class="fp-select" id="fProceso" onchange="applyFilters()">
         <option value="">Todos los procesos</option>
       </select>
     </div>
+
     <div class="fp-section">
       <div class="fp-label">Sector / Responsable</div>
       <select class="fp-select" id="fSector" onchange="applyFilters()">
         <option value="">Todos los sectores</option>
       </select>
     </div>
+
     <div class="fp-section">
       <div class="fp-label">Tipo de Meta</div>
       <div class="fp-chips" id="chipsTipo">
@@ -228,6 +250,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
         <span class="chip" data-g="tipo" data-v="Minimizar">Minimizar</span>
       </div>
     </div>
+
     <div class="fp-section">
       <div class="fp-count">
         <strong id="fcCount" style="color:#00B5CC">—</strong>
@@ -236,10 +259,13 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
       <button class="fp-reset" onclick="resetFilters()">↺ Limpiar filtros</button>
     </div>
   </div>
+
   <!-- CANVAS -->
   <div class="canvas" id="canvas">
+
     <!-- PAGE: LISTA -->
     <div id="pg-lista"></div>
+
     <!-- PAGE: RESUMEN -->
     <div id="pg-resumen">
       <div class="cards-row" id="kpiCards"></div>
@@ -249,10 +275,13 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
       </div>
       <div class="chart-box" id="chartCambios"></div>
     </div>
+
     <!-- PAGE: NORMAS -->
     <div id="pg-normas" id="pgNormas"></div>
+
   </div>
 </div>
+
 <!-- STATUS BAR -->
 <div class="statusbar">
   <span class="sb-item">📋 <span id="sbTotal">—</span> indicadores totales</span>
@@ -260,6 +289,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
   <span class="sb-item">🏛 AUBASA – Autopistas de Buenos Aires S.A.</span>
   <span class="sb-item" style="margin-left:auto">PAU/04 - A03 · Rev.03</span>
 </div>
+
 <script>
 const OBJ={
 1:"Optimizar los procesos estratégicos, operativos y de soporte con el fin de aumentar la eficacia y la eficiencia en el logro de los objetivos.",
@@ -269,6 +299,7 @@ const OBJ={
 5:"Extender con un programa sostenido la implementación de un Sistema de Gestión de Cumplimiento Legal en todos los procesos de AUBASA.",
 6:"Comunicar y obtener de todos los miembros de AUBASA el compromiso férreo de la responsabilidad por sus funciones y por el cumplimiento de esta política."
 };
+
 // [anio,doc,obj,norma,proceso,indicador,meta,tipo,frecuencia,algoritmo,responsable,estrategia,vigencia,nota]
 const DATA=[
 [2025,"BALP",1,"ISO 9001","Operaciones y Peaje","Participación TelePASE","≥ 80%","Maximizar","Mensual","[Tránsito TelePASE / Tránsito Total Pagante] *100","Gerencia Comercial","Publicar beneficios TelePASE en canales digitales. Seguimiento mensual.","Ene.2025–Dic.2025",""],
@@ -300,7 +331,7 @@ const DATA=[
 [2025,"BALP",4,"ISO 9001","Atención al Usuario","Atención al Usuario – Respuesta de Correos","≥ 95%","Maximizar","Mensual","[Correos respondidos / Total correos recibidos] *100","Gerencia Comercial","Operación CAU, control de medios de comunicación.","Ene.2025–Dic.2025",""],
 [2025,"BALP",4,"ISO 9001","Mantenimiento","Cumplimiento Mantenimiento preventivo – Taller Mecánico","≥ 95%","Maximizar","Mensual","[Trabajos mant. preventivo realizados / programados] *100","Ger. Mantenimiento - Taller Mecánico","Actualización de flota, plan de mantenimiento, gestión de insumos.","Ene.2025–Dic.2025",""],
 [2025,"BALP",4,"ISO 9001","Mantenimiento","Cumplimiento Mantenimiento correctivo – Taller Mecánico","≥ 90%","Maximizar","Mensual","[Solicitudes tiempo ≤60 días / Total solicitudes] *100","Ger. Mantenimiento - Taller Mecánico","Actualización de flota, plan de mantenimiento, gestión de insumos.","Ene.2025–Dic.2025",""],
-[2025,"BALP",4,"ISO 9001","Recursos Humanos","Fecha de solicitud de puestos no jerárquicos con plazo de 60 días","≥ 95%","Maximizar","Mensual","[Fecha de alta ARCA – Fecha Requerimiento del Puesto] — plazo ≤60 días","Gerencia de Recursos Humanos","Control y actualización de Descripción y Perfiles de Puestos.","Ene.2025–Dic.2025",""],
+[2025,"BALP",4,"ISO 9001","Recursos Humanos","% Cumplimiento de ingreso de personal no jerárquico (≤ 60 días)","≥ 95%","Maximizar","Mensual","[Fecha de alta ARCA – Fecha Requerimiento del Puesto] — plazo ≤60 días","Gerencia de Recursos Humanos","Control y actualización de Descripción y Perfiles de Puestos.","Ene.2025–Dic.2025",""],
 [2025,"BALP",4,"ISO 39001","Seguridad Vial","Equipamiento y condiciones generales – Ambulancia","≤ 0,25","Minimizar","Trimestral","[Cantidad de no cumplimientos de parámetros 3-5]","Ger. Prevención y Seguridad Integral","Evaluación del proveedor de emergencia sanitaria (SUM ET-PS-01).","Ene.2025–Dic.2025",""],
 [2025,"BALP",4,"ISO 39001","Seguridad Vial","Conformidad – Auxilio mecánico","≥ 95%","Maximizar","Mensual","[Conformidad usuario / Conformidad + Disconformidad] *100","Ger. Prevención y Seguridad Integral","Evaluación del proveedor de auxilio mecánico (VAZQUEZ ET-PS-04).","Ene.2025–Dic.2025",""],
 [2025,"BALP",4,"ISO 9001","Tecnología y Sistemas","Cumplimiento PMP – Sistemas","≥ 75%","Maximizar","Mensual","[Mant. preventivos realizados / Mant. preventivos planificados] *100","Ger. Tecnología y Sistemas","Planificación y seguimiento del PMP. Gestión de insumos y proveedores.","Ene.2025–Dic.2025",""],
@@ -361,7 +392,7 @@ const DATA=[
 [2026,"BALP",4,"ISO 9001","Atención al Usuario","Atención al Usuario – Respuesta de Correos","≥ 95%","Maximizar","Mensual","[Correos respondidos / Total correos recibidos] *100","Gerencia Comercial","Operación CAU, control de medios de comunicación.","Ene.2026–Dic.2026",""],
 [2026,"BALP",4,"ISO 9001","Mantenimiento","Cumplimiento Mantenimiento preventivo – Taller Mecánico","≥ 95%","Maximizar","Mensual","[Trabajos mant. preventivo realizados / programados] *100","Ger. Mantenimiento - Taller Mecánico","Actualización de flota, plan de mantenimiento.","Ene.2026–Dic.2026",""],
 [2026,"BALP",4,"ISO 9001","Mantenimiento","Cumplimiento Mantenimiento correctivo – Taller Mecánico","≥ 90%","Maximizar","Mensual","[Solicitudes tiempo ≤60 días / Total solicitudes] *100","Ger. Mantenimiento - Taller Mecánico","Actualización de flota, plan de mantenimiento.","Ene.2026–Dic.2026",""],
-[2026,"BALP",4,"ISO 9001","Recursos Humanos","Fecha de solicitud de puestos no jerárquicos con plazo de 60 días","≥ 95%","Maximizar","Mensual","[Fecha de alta ARCA – Fecha Requerimiento del Puesto] — plazo ≤60 días","Gerencia de Recursos Humanos","Control y actualización de Descripción y Perfiles de Puestos.","Ene.2026–Dic.2026",""],
+[2026,"BALP",4,"ISO 9001","Recursos Humanos","% Cumplimiento de ingreso de personal no jerárquico (≤ 60 días)","≥ 95%","Maximizar","Mensual","[Fecha de alta ARCA – Fecha Requerimiento del Puesto] — plazo ≤60 días","Gerencia de Recursos Humanos","Control y actualización de Descripción y Perfiles de Puestos.","Ene.2026–Dic.2026",""],
 [2026,"BALP",4,"ISO 39001","Seguridad Vial","Equipamiento y condiciones generales – Ambulancia","≤ 0,25","Minimizar","Trimestral","[Cantidad de no cumplimientos de parámetros 3-5]","Ger. Prevención y Seguridad Integral","Evaluación del proveedor de emergencia sanitaria.","Ene.2026–Dic.2026",""],
 [2026,"BALP",4,"ISO 39001","Seguridad Vial","Conformidad – Auxilio mecánico","≥ 95%","Maximizar","Mensual","[Conformidad usuario / Conformidad + Disconformidad] *100","Ger. Prevención y Seguridad Integral","Evaluación del proveedor de auxilio mecánico.","Ene.2026–Dic.2026",""],
 [2026,"BALP",4,"ISO 9001","Tecnología y Sistemas","Cumplimiento PMP – Sistemas","≥ 75%","Maximizar","Mensual","[Mant. preventivos realizados / Mant. preventivos planificados] *100","Ger. Tecnología y Sistemas","Planificación y seguimiento del PMP.","Ene.2026–Dic.2026",""],
@@ -399,15 +430,19 @@ const DATA=[
 [2026,"BALP",5,"ISO 9001 / ISO 39001","Mantenimiento","Factor de Conformidad Legal y Equipamiento de Emergencia",".= 100%","Maximizar","Mensual","[Vehículos con documentación y equipamiento en regla / Total de vehículos ingresados] * 100","Ger. Mantenimiento - Taller Mecánico","Alerta temprana de vencimientos (<30 días). Retención si falta equipamiento.","Ene.2026–Dic.2026",""],
 [2026,"BALP",2,"ISO 39001","Mantenimiento","Tasa de Fallas en Sistemas Críticos","≤ 10%","Minimizar","Mensual","[Ítems NO CUMPLE en sistemas críticos / Total de mantenimientos preventivos] * 100","Ger. Mantenimiento - Taller Mecánico","Registro exacto de falla en observaciones. Investigación de fallas repetitivas.","Ene.2026–Dic.2026",""]
 ];
+
 // Init proceso filter
 const procesos=[...new Set(DATA.map(r=>r[4]))].sort();
 const selP=document.getElementById('fProceso');
 procesos.forEach(p=>{const o=document.createElement('option');o.value=p;o.textContent=p;selP.appendChild(o);});
+
 // Init sector (responsable) filter
 const sectores=[...new Set(DATA.map(r=>r[10]))].sort();
 const selS=document.getElementById('fSector');
 sectores.forEach(s=>{const o=document.createElement('option');o.value=s;o.textContent=s;selS.appendChild(o);});
+
 document.getElementById('sbTotal').textContent=DATA.length;
+
 // Chip toggle
 document.querySelectorAll('.chip').forEach(c=>{
   c.addEventListener('click',function(){
@@ -417,7 +452,9 @@ document.querySelectorAll('.chip').forEach(c=>{
     applyFilters();
   });
 });
+
 function getChip(g){return document.querySelector(`.chip.on[data-g="${g}"]`)?.dataset.v||"";}
+
 function applyFilters(){
   const q=(document.getElementById('fSearch').value||"").toLowerCase();
   const fa=getChip('anio'); const fd=getChip('doc');
@@ -437,6 +474,7 @@ function applyFilters(){
   document.getElementById('fcCount').textContent=window._filtered.length;
   renderCurrent();
 }
+
 function resetFilters(){
   document.getElementById('fSearch').value='';
   document.getElementById('fProceso').value='';
@@ -446,8 +484,10 @@ function resetFilters(){
   });
   applyFilters();
 }
+
 function normaCls(n){return n.includes('/')?"nb-both":n.includes('39001')?"nb-39":"nb-9";}
 function metaCls(t){return t==="Maximizar"?"mb-max":t==="Minimizar"?"mb-min":"mb-eq";}
+
 // ── RENDER LISTA ──
 function renderLista(data){
   const grouped={};
@@ -486,6 +526,7 @@ function renderLista(data){
   });
   document.getElementById('pg-lista').innerHTML=h;
 }
+
 // ── RENDER RESUMEN ──
 function renderResumen(data){
   const n9=data.filter(r=>r[3]==="ISO 9001").length;
@@ -497,6 +538,7 @@ function renderResumen(data){
     <div class="kpi-card navy"><div class="kv">${n9}</div><div class="kl">ISO 9001 – Calidad</div></div>
     <div class="kpi-card orange"><div class="kv">${n39}</div><div class="kl">ISO 39001 – Seg. Vial</div></div>
     <div class="kpi-card green"><div class="kv">${nMen}</div><div class="kl">Frecuencia mensual</div></div>`;
+
   const byProc={};
   data.forEach(r=>{byProc[r[4]]=(byProc[r[4]]||0)+1;});
   const sorted=Object.entries(byProc).sort((a,b)=>b[1]-a[1]);
@@ -511,6 +553,7 @@ function renderResumen(data){
     </div>`;
   });
   document.getElementById('chartProceso').innerHTML=bh;
+
   const byNorma={"ISO 9001":0,"ISO 39001":0,"Ambas":0};
   data.forEach(r=>{if(r[3].includes("/"))byNorma["Ambas"]++;else if(r[3].includes("39001"))byNorma["ISO 39001"]++;else byNorma["ISO 9001"]++;});
   const nc={"ISO 9001":"#2E75B6","ISO 39001":"#ED7D31","Ambas":"#375623"};
@@ -523,6 +566,7 @@ function renderResumen(data){
   ph+=`<div class="bar-row"><span class="bar-label" style="color:var(--orange)">Minimizar</span><div class="bar-track"><div class="bar-fill" style="width:${Math.round(nMin/data.length*100)}%;background:#843C1D"></div></div><span class="bar-val">${nMin}</span></div>`;
   ph+=`</div>`;
   document.getElementById('chartNorma').innerHTML=ph;
+
   document.getElementById('chartCambios').innerHTML=`
     <div class="chart-title">Cambios de meta entre 2025 y 2026</div>
     <table class="cambios-table">
@@ -534,6 +578,7 @@ function renderResumen(data){
       </tbody>
     </table>`;
 }
+
 // ── RENDER NORMAS ──
 function renderNormas(data){
   const iso9=data.filter(r=>r[3]==="ISO 9001"||r[3].includes("/"));
@@ -562,6 +607,7 @@ function renderNormas(data){
     block("ISO 9001 – Sistema de Gestión de la Calidad","iso9",iso9)+
     block("ISO 39001 – Sistema de Gestión de la Seguridad Vial","iso39",iso39);
 }
+
 // ── PAGE SWITCHING ──
 let currentPage='lista';
 function renderCurrent(){
@@ -570,6 +616,7 @@ function renderCurrent(){
   else if(currentPage==='resumen') renderResumen(d);
   else if(currentPage==='normas') renderNormas(d);
 }
+
 function showPage(p,btn){
   currentPage=p;
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
@@ -579,6 +626,7 @@ function showPage(p,btn){
   });
   renderCurrent();
 }
+
 // Init
 applyFilters();
 </script>
