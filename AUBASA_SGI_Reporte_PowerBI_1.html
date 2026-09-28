@@ -111,7 +111,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 #pg-normas{display:none}
 .norma-section{background:#fff;border:1px solid var(--pbi-border);border-radius:4px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .norma-head{padding:10px 16px;display:flex;align-items:center;gap:12px}
-.norma-head.iso9{background:#007A8C}.norma-head.iso39{background:#843C1D}
+.norma-head.iso9{background:#007A8C}.norma-head.iso39{background:#843C1D}.norma-head.iso37{background:#1A5F8A}
 .norma-head-title{color:#fff;font-size:13px;font-weight:600}
 .norma-head-sub{color:rgba(255,255,255,.7);font-size:11px}
 .norma-body{padding:14px 16px}
@@ -132,6 +132,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
 .norma-b{display:inline-block;font-size:9px;padding:2px 6px;border-radius:8px;white-space:nowrap}
 .nb-9{background:#E8F8FB;color:#007A8C;border:1px solid #00B5CC}
 .nb-39{background:var(--lorange);color:var(--orange);border:1px solid #F5C4B3}
+.nb-37{background:#E8F4FD;color:#1A5F8A;border:1px solid #BDD7EE}
 .nb-both{background:var(--lgreen);color:var(--green);border:1px solid #A8D080}
 .freq-b{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;background:#F3F2F1;color:var(--pbi-muted)}
 .nota-row td{background:#FFFAF0!important}
@@ -184,6 +185,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
   <div class="topbar-right">
     <span class="pbi-badge">ISO 9001</span>
     <span class="pbi-badge">ISO 39001</span>
+    <span class="pbi-badge">ISO 37001</span>
     <span class="pbi-badge">PAU/04 - A03 · Rev.03</span>
   </div>
 </div>
@@ -231,6 +233,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
         <span class="chip on" data-g="doc" data-v="">Todos</span>
         <span class="chip" data-g="doc" data-v="BALP">BALP</span>
         <span class="chip" data-g="doc" data-v="SVIA">SVIA</span>
+        <span class="chip" data-g="doc" data-v="SGAs">SGAs</span>
       </div>
     </div>
 
@@ -240,6 +243,7 @@ body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--pbi-bg);color:
         <span class="chip on" data-g="norma" data-v="">Todas</span>
         <span class="chip" data-g="norma" data-v="ISO 9001">9001</span>
         <span class="chip" data-g="norma" data-v="ISO 39001">39001</span>
+        <span class="chip" data-g="norma" data-v="ISO 37001">37001</span>
       </div>
     </div>
 
@@ -312,7 +316,11 @@ const OBJ={
 3:"Formar y actualizar al personal en base a las últimas tecnologías aplicables.",
 4:"Evaluar la marcha del Sistema de Gestión de manera integral, para su mejora continua.",
 5:"Extender con un programa sostenido la implementación de un Sistema de Gestión de Cumplimiento Legal en todos los procesos de AUBASA.",
-6:"Comunicar y obtener de todos los miembros de AUBASA el compromiso férreo de la responsabilidad por sus funciones y por el cumplimiento de esta política."
+6:"Comunicar y obtener de todos los miembros de AUBASA el compromiso férreo de la responsabilidad por sus funciones y por el cumplimiento de esta política.",
+7:"Desarrollar y fortalecer la cultura antisoborno",
+8:"Implementar y certificar el SGAs conforme a ISO 37001:2025",
+9:"Implementar y fortalecer los controles antisoborno en los procesos comprendidos dentro del alcance del SGAs",
+10:"Implementar la Línea Ética conforme a buenas prácticas"
 };
 
 // [anio,doc,obj,norma,proceso,indicador,meta,tipo,frecuencia,algoritmo,responsable,estrategia,vigencia,nota]
@@ -444,6 +452,19 @@ const DATA=[
 [2025,"BALP",2,"ISO 39001","Mantenimiento","Tasa de Fallas en Sistemas Críticos","≤ 10%","Minimizar","Mensual","[Ítems NO CUMPLE en sistemas críticos / Total de mantenimientos preventivos] * 100","Ger. Mantenimiento - Taller Mecánico","Registro exacto de falla en observaciones. Investigación de fallas repetitivas.","Ene.2025–Dic.2025","","<div class=\"rec-grid\"><div><span class=\"rec-tag rt-rh\">👤</span><span class=\"rec-item\"> 4 mecánicos internos + 1 pañolero para gestión de stock de repuestos</span></div><div><span class=\"rec-tag rt-inf\">🏗️</span><span class=\"rec-item\"> Elementos básicos de taller: compresor · hidráulico · herramientas generales · Stock propio de repuestos críticos</span></div><div><span class=\"rec-tag rt-sys\">💻</span><span class=\"rec-item\"> App PMP AUBASA – planificación y registro · App stock de repuestos</span></div><div><span class=\"rec-tag rt-ext\">🤝</span><span class=\"rec-item\"> Talleres externos para trabajos que requieren equipamiento especializado</span></div><div><span class=\"rec-tag rt-eco\">💰</span><span class=\"rec-item\"> Partida presupuestaria asignada – Ger. Mantenimiento / Taller Mecánico</span></div></div>"],
 [2026,"BALP",5,"ISO 9001 / ISO 39001","Mantenimiento","Factor de Conformidad Legal y Equipamiento de Emergencia",".= 100%","Maximizar","Mensual","[Vehículos con documentación y equipamiento en regla / Total de vehículos ingresados] * 100","Ger. Mantenimiento - Taller Mecánico","Alerta temprana de vencimientos (<30 días). Retención si falta equipamiento.","Ene.2026–Dic.2026","","<div class=\"rec-grid\"><div><span class=\"rec-tag rt-rh\">👤</span><span class=\"rec-item\"> 4 mecánicos + 1 pañolero – control de documentación y equipamiento obligatorio</span></div><div><span class=\"rec-tag rt-inf\">🏗️</span><span class=\"rec-item\"> Stock de equipamiento de emergencia vehicular obligatorio</span></div><div><span class=\"rec-tag rt-sys\">💻</span><span class=\"rec-item\"> App PMP AUBASA – alertas de vencimientos (< 30 días)</span></div><div><span class=\"rec-tag rt-eco\">💰</span><span class=\"rec-item\"> Partida presupuestaria asignada – Ger. Mantenimiento / Taller Mecánico</span></div></div>"],
 [2026,"BALP",2,"ISO 39001","Mantenimiento","Tasa de Fallas en Sistemas Críticos","≤ 10%","Minimizar","Mensual","[Ítems NO CUMPLE en sistemas críticos / Total de mantenimientos preventivos] * 100","Ger. Mantenimiento - Taller Mecánico","Registro exacto de falla en observaciones. Investigación de fallas repetitivas.","Ene.2026–Dic.2026","","<div class=\"rec-grid\"><div><span class=\"rec-tag rt-rh\">👤</span><span class=\"rec-item\"> 4 mecánicos internos + 1 pañolero para gestión de stock de repuestos</span></div><div><span class=\"rec-tag rt-inf\">🏗️</span><span class=\"rec-item\"> Elementos básicos de taller: compresor · hidráulico · herramientas generales · Stock propio de repuestos críticos</span></div><div><span class=\"rec-tag rt-sys\">💻</span><span class=\"rec-item\"> App PMP AUBASA – planificación y registro · App stock de repuestos</span></div><div><span class=\"rec-tag rt-ext\">🤝</span><span class=\"rec-item\"> Talleres externos para trabajos que requieren equipamiento especializado</span></div><div><span class=\"rec-tag rt-eco\">💰</span><span class=\"rec-item\"> Partida presupuestaria asignada – Ger. Mantenimiento / Taller Mecánico</span></div></div>"]
+,
+[2026,"SGAs",7,"ISO 37001","Gestión Antisoborno","Capacitaciones","Comunicar y asegurar que todos los colaboradores dentro del alcance del SGAs conozcan la Política Antisoborno y la Línea Ética","Maximizar","Anual","[Colaboradores capacitados / Total de colaboradores] * 100","Función Antisoborno - RRHH","Implementar el plan anual de capacitación antisoborno.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Función Antisoborno, RRHH y consultores externos. Registros y evidencia de asistencia, material y evaluaciones. Presupuesto asignado.</span></div></div>"],
+[2026,"SGAs",7,"ISO 37001","Gestión Antisoborno","Comunicaciones","Comunicar y asegurar que todos los colaboradores dentro del alcance del SGAs conozcan la Política Antisoborno y la Línea Ética","Maximizar","Anual","[Comunicaciones realizadas / Total de comunicaciones realizadas] * 100","Función Antisoborno - RRII","Difundir periódicamente la Política Antisoborno, Línea Ética y mensajes de concientización mediante canales internos de comunicación","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Función Antisoborno y Relaciones Institucionales. Intranet, correo electrónico, cartelería digital y canales internos. Presupuesto asignado.</span></div></div>"],
+[2026,"SGAs",8,"ISO 37001","Gestión Antisoborno","Certificación ISO 37001","Obtener la certificación ISO 37001 sin no conformidades mayores.","Maximizar","Anual","[Procesos y procedimientos documentados e implementados / Total de procesos y procedimientos planificados] * 100","Función Antisoborno","Desarrollar, aprobar, implementar y mantener la documentación del SGAs de acuerdo con el plan de trabajo definido.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Función Antisoborno y responsables de procesos involucrados. Sistema de gestión documental y matrices de seguimiento. Presupuesto asignado.</span></div></div>"],
+[2026,"SGAs",8,"ISO 37001","Gestión Antisoborno","Certificación ISO 37001","Obtener la certificación ISO 37001 sin no conformidades mayores.","Maximizar","Anual","[Actividades ejecutadas del plan de trabajo / Total de actividades planificadas] * 100","Función Antisoborno -","Ejecutar y monitorear el plan de trabajo del SGAs mediante reuniones periódicas de seguimiento y control de avances.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Función Antisoborno, responsables designados para cada actividad y consultores externos. Plan de trabajo y herramientas de seguimiento. Presupuesto asignado.</span></div></div>"],
+[2026,"SGAs",9,"ISO 37001","Legales","Cláusulas antisoborno","Implementar controles antisoborno en planificación, contratación, gestión de proveedores, pagos y ejecución de obras.","Maximizar","Anual","[Contratos con cláusulas antisoborno / Total de contratos] * 100","Legales","Incorporar cláusulas antisoborno y de integridad en la documentación legal dentro del alcance del SGAs.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Gerencia de Legales y Función Antisoborno. Cláusulas contractuales actualizadas. Recursos del área.</span></div></div>"],
+[2026,"SGAs",9,"ISO 37001","Compras y contrataciones","Compras directas","Implementar controles antisoborno en planificación, contratación, gestión de proveedores, pagos y ejecución de obras","Maximizar","Anual","[Compras directas / Total de compras y contrataciones] * 100","Compras y contrataciones","Fortalecer la planificación y justificación de compras directas mediante revisiones y aprobaciones conforme a los procedimientos vigentes","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Compras y Contrataciones, áreas requirentes y aprobadores. Sistema de compras y registros de aprobación. Recursos del área.</span></div></div>"],
+[2026,"SGAs",9,"ISO 37001","Compliance","Debida diligencia","Implementar controles antisoborno en planificación, contratación, gestión de proveedores, pagos y ejecución de obras","Maximizar","Anual","[Terceros sometidos a debida diligencia / Total de terceros sujetos a evaluación] *100","Compliance","Aplicar procedimientos de debida diligencia a terceros identificados según criterios de riesgo definidos.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Compliance y áreas involucradas. Formularios, bases documentales y listas de verificación. Recursos del área.</span></div></div>"],
+[2026,"SGAs",9,"ISO 37001","Recursos Humanos","RRHH","Implementar controles antisoborno en planificación, contratación, gestión de proveedores, pagos y ejecución de obras","Maximizar","Anual","[Declaraciones de conflicto de interés vigentes / Total de declaraciones requeridas] * 100","RRHH","Gestionar la obtención, actualización y conservación de las declaraciones de conflicto de interés de los colaboradores alcanzados.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">RRHH, Compliance y colaboradores alcanzados. Formularios y repositorio documental. Recursos del área.</span></div></div>"],
+[2026,"SGAs",9,"ISO 37001","Finanzas","Finanzas","Implementar controles antisoborno en planificación, contratación, gestión de proveedores, pagos y ejecución de obras","Maximizar","Anual","[Pagos con documentación / Total de pagos revisados] * 100","Finanzas","Verificar que los pagos dentro del alcance del SGAs cuenten con documentación de respaldo, aprobaciones y registros conforme a los procedimientos definidos","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Administración y Finanzas, aprobadores y Función Antisoborno. Sistema financiero, registros contables y documentación de respaldo. Recursos del área.</span></div></div>"],
+[2026,"SGAs",9,"ISO 37001","Obras","Obras","Implementar controles antisoborno en planificación, contratación, gestión de proveedores, pagos y ejecución de obras","Maximizar","Anual","[Remitos y registros de transporte verificados / Total de remitos revisados] * 100","Obras","Implementar controles de verificación documental.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Gerencia de Obras y consultora externa. Registros y documentación de soporte. Recursos del área.</span></div></div>"],
+[2026,"SGAs",10,"ISO 37001","Compliance","Línea Ética","Asegurar la disponibilidad, accesibilidad y difusión del canal","Maximizar","Anual","% de avance de implementación","Jefe de Compliance","Implementar la Línea Ética asegurando su disponibilidad, procedimiento de gestión, confidencialidad y mecanismo de recepción y tratamiento de denuncias.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Jefe de Compliance y proveedor del servicio. Plataforma de denuncias, procedimiento de gestión y registros. Presupuesto para implementación y mantenimiento del canal.</span></div></div>"],
+[2026,"SGAs",10,"ISO 37001","Compliance","Línea Ética","Asegurar la disponibilidad, accesibilidad y difusión del canal","Maximizar","Anual","Cantidad de denuncias","Jefe de Compliance","Promover el uso responsable de la Línea Ética mediante acciones de difusión, capacitación y comunicación permanente.","","","<div class=\"rec-grid\"><div><span class=\"rec-item\">Comité de Ética, Función Antisoborno y Jefe de Compliance. Plataforma de denuncias y canales de comunicación interna. Presupuesto para difusión y mantenimiento del canal.</span></div></div>"]
 ];
 
 // Init proceso filter
@@ -500,7 +521,7 @@ function resetFilters(){
   applyFilters();
 }
 
-function normaCls(n){return n.includes('/')?"nb-both":n.includes('39001')?"nb-39":"nb-9";}
+function normaCls(n){return n.includes('/')?"nb-both":n.includes('39001')?"nb-39":n.includes('37001')?"nb-37":"nb-9";}
 function metaCls(t){return t==="Maximizar"?"mb-max":t==="Minimizar"?"mb-min":"mb-eq";}
 
 // ── RENDER LISTA ──
@@ -509,7 +530,7 @@ function renderLista(data){
   data.forEach(r=>{const k=r[2];if(!grouped[k])grouped[k]=[];grouped[k].push(r);});
   let h='';
   if(!data.length){h='<div class="empty-state"><svg viewBox="0 0 24 24"><path d="M3 4h18l-7 9v7l-4-3V13L3 4z"/></svg><br>Sin resultados para los filtros seleccionados.</div>';}
-  else[1,2,3,4,5,6].forEach(n=>{
+  else[1,2,3,4,5,6,7,8,9,10].forEach(n=>{
     const items=grouped[n]||[];
     if(!items.length)return;
     h+=`<div class="obj-block">
@@ -554,6 +575,7 @@ function renderResumen(data){
     <div class="kpi-card accent"><div class="kv">${data.length}</div><div class="kl">Total indicadores</div></div>
     <div class="kpi-card navy"><div class="kv">${n9}</div><div class="kl">ISO 9001 – Calidad</div></div>
     <div class="kpi-card orange"><div class="kv">${n39}</div><div class="kl">ISO 39001 – Seg. Vial</div></div>
+    <div class="kpi-card accent"><div class="kv">${data.filter(r=>r[3].includes("37001")).length}</div><div class="kl">ISO 37001</div></div>
     <div class="kpi-card green"><div class="kv">${nMen}</div><div class="kl">Frecuencia mensual</div></div>`;
 
   const byProc={};
@@ -571,9 +593,9 @@ function renderResumen(data){
   });
   document.getElementById('chartProceso').innerHTML=bh;
 
-  const byNorma={"ISO 9001":0,"ISO 39001":0,"Ambas":0};
-  data.forEach(r=>{if(r[3].includes("/"))byNorma["Ambas"]++;else if(r[3].includes("39001"))byNorma["ISO 39001"]++;else byNorma["ISO 9001"]++;});
-  const nc={"ISO 9001":"#2E75B6","ISO 39001":"#ED7D31","Ambas":"#375623"};
+  const byNorma={"ISO 9001":0,"ISO 39001":0,"ISO 37001":0,"Ambas":0};
+  data.forEach(r=>{if(r[3].includes("/"))byNorma["Ambas"]++;else if(r[3].includes("39001"))byNorma["ISO 39001"]++;else if(r[3].includes("37001"))byNorma["ISO 37001"]++;else byNorma["ISO 9001"]++;});
+  const nc={"ISO 9001":"#2E75B6","ISO 39001":"#ED7D31","ISO 37001":"#1A5F8A","Ambas":"#375623"};
   let ph=`<div class="chart-title">Distribución por norma ISO</div><div class="pie-area"><div>`;
   Object.entries(byNorma).forEach(([k,v])=>{ph+=`<div class="legend-item"><div class="legend-dot" style="background:${nc[k]}"></div>${k}: <strong>${v}</strong></div>`;});
   ph+=`</div></div>`;
@@ -600,6 +622,7 @@ function renderResumen(data){
 function renderNormas(data){
   const iso9=data.filter(r=>r[3]==="ISO 9001"||r[3].includes("/"));
   const iso39=data.filter(r=>r[3].includes("39001"));
+  const iso37=data.filter(r=>r[3].includes("37001"));
   function block(norma,cls,items){
     let h=`<div class="norma-section"><div class="norma-head ${cls}">
       <div><div class="norma-head-title">${norma}</div><div class="norma-head-sub">${items.length} indicadores</div></div>
@@ -622,7 +645,7 @@ function renderNormas(data){
   }
   document.getElementById('pg-normas').innerHTML=
     block("ISO 9001 – Sistema de Gestión de la Calidad","iso9",iso9)+
-    block("ISO 39001 – Sistema de Gestión de la Seguridad Vial","iso39",iso39);
+    block("ISO 39001 - Sistema de Gestión de la Seguridad Vial","iso39",iso39) + block("ISO 37001 - Sistema de Gestión Antisoborno","iso37",iso37);
 }
 
 // ── PAGE SWITCHING ──
